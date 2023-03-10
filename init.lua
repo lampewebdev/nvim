@@ -1,0 +1,2 @@
+require("lampe")
+print("hello")
