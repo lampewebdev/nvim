@@ -1,2 +1,3 @@
 require("lampe.remap")
-print("from lampe")
+require("lampe.packer")
+require("lampe.set")

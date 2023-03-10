@@ -1,2 +1,1 @@
 require("lampe")
-print("hello")
