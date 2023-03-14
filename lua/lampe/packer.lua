@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
     }
 
     use({ 'rose-pine/neovim', as = 'rose-pine' })
-
+    use 'folke/tokyonight.nvim'
     use {'lewis6991/gitsigns.nvim'}
 
     use {
