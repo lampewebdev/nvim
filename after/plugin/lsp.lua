@@ -21,6 +21,13 @@ lsp.set_sign_icons({
   info = '»'
 })
 
+lsp.format_on_save({
+  servers = {
+    ['lua_ls'] = {'lua'},
+    ['rust_analyzer'] = {'rust'},
+  }
+})
+
 lsp.setup()
 
 vim.diagnostic.config()
