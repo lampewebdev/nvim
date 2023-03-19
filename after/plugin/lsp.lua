@@ -35,6 +35,18 @@ opts.desc = "format file lsp"
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, opts)
 opts.desc = "jump to implementation lsp"
 vim.keymap.set('n', '<leader>li', vim.lsp.buf.implementation, opts)
+opts.desc = "Show Code Actions"
+vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, opts)
+opts.desc = "Show Code Actions"
+vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references, opts)
+opts.desc = "Open Info Float"
+vim.keymap.set('n', '<leader>lo', vim.diagnostic.open_float, opts)
+opts.desc = "Decclartion"
+vim.keymap.set('n', '<leader>lD', vim.lsp.buf.declaration, opts)
+opts.desc = "Definition"
+vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, opts)
+opts.desc = "Type Definition"
+vim.keymap.set('n', '<leader>lt', vim.lsp.buf.type_definition, opts)
 
 local cmp = require('cmp')
 cmp.setup({

@@ -26,3 +26,4 @@ vim.keymap.set('n', '<leader>tb', builtin.buffers, { desc = "Telescope buffers" 
 vim.keymap.set('n', '<leader>tc', builtin.commands, { desc = "Telescope commands" })
 vim.keymap.set('n', '<leader>tk', builtin.keymaps, { desc = "Telescope keymaps" })
 vim.keymap.set('n', '<leader>th', builtin.git_bcommits, { desc = "Telescope file git history" })
+vim.keymap.set('n', '<leader>tr', builtin.lsp_references, { desc = "Telescope find references" })
