@@ -57,17 +57,6 @@ vim.keymap.set('n', '<leader>lt', vim.lsp.buf.type_definition, opts)
 
 local cmp = require('cmp')
 cmp.setup({
-    sources = {
-        {
-            name = 'spell',
-            option = {
-                keep_all_entries = false,
-                enable_in_context = function()
-                    return true
-                end,
-            },
-        },
-    },
     mapping = cmp.mapping.preset.insert({
         ['<C-h>'] = cmp.mapping.confirm({ select = true }),
         ['<C-k>'] = cmp.mapping.select_next_item(),
