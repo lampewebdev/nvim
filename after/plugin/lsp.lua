@@ -15,17 +15,17 @@ lsp.ensure_installed({
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.set_sign_icons({
-  error = '✘',
-  warn = '▲',
-  hint = '⚑',
-  info = '»'
+    error = '✘',
+    warn = '▲',
+    hint = '⚑',
+    info = '»'
 })
 
 lsp.format_on_save({
-  servers = {
-    ['lua_ls'] = {'lua'},
-    ['rust_analyzer'] = {'rust'},
-  }
+    servers = {
+        ['lua_ls'] = { 'lua' },
+        ['rust_analyzer'] = { 'rust' },
+    }
 })
 
 lsp.setup()
@@ -57,11 +57,22 @@ vim.keymap.set('n', '<leader>lt', vim.lsp.buf.type_definition, opts)
 
 local cmp = require('cmp')
 cmp.setup({
-  mapping = {
-    ['<C-h>'] = cmp.mapping.confirm({ select = true }),
-    ['<C-k>'] = cmp.mapping.select_next_item(),
-    ['<C-j>'] = cmp.mapping.select_prev_item(),
-    ['<C-l>'] = cmp.mapping.abort(),
-    ['<C-Space>'] = cmp.mapping.complete(),
-  }
+    sources = {
+        {
+            name = 'spell',
+            option = {
+                keep_all_entries = false,
+                enable_in_context = function()
+                    return true
+                end,
+            },
+        },
+    },
+    mapping = cmp.mapping.preset.insert({
+        ['<C-h>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-k>'] = cmp.mapping.select_next_item(),
+        ['<C-j>'] = cmp.mapping.select_prev_item(),
+        ['<C-l>'] = cmp.mapping.abort(),
+        ['<C-Space>'] = cmp.mapping.complete(),
+    }),
 })

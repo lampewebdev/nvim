@@ -3,13 +3,14 @@ local telescope = require('telescope')
 
 telescope.setup({
     defaults = {
+        path_display = { "truncate" },
         layout_strategy = 'horizontal',
         layout_config = {
             height = vim.o.lines,
             width = vim.o.columns,
             horizontal = {
                 prompt_position = "bottom",
-                preview_width = 0.7,
+                preview_width = 0.6,
                 -- results_width = 0.8,
             },
             vertical = {
