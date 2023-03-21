@@ -52,9 +52,9 @@ return require('packer').startup(function(use)
             vim.o.timeout = true
             vim.o.timeoutlen = 200
             require("which-key").setup {
-                presets = {
-                    g = false
-                }
+                -- presets = {
+                --     g = false
+                -- }
                 -- your configuration comes here
                 -- or leave it empty to use the default settings
                 -- refer to the configuration section below
